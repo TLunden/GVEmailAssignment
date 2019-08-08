@@ -10,7 +10,7 @@
   <!-- Fixes rendering issues in Apple Mail on iOS 10+ -->
   <meta name="x-apple-disable-message-reformatting" />
   <!-- The title tag shows in certain email notifications, like Android 4.4. -->
-  <title>Letterform Boilerplate Template</title>
+  <title>Upcoming Events at Granville's Belterra Community</title>
   <style type="text/css">
     /* Fixes */
     /* Adjust text size for multiple platforms */
@@ -139,7 +139,7 @@
     h1 {
       margin: 0;
       padding: 0;
-      font-size: 24px;
+      font-size: 32px;
       font-weight: 700;
       text-align: left;
     }
@@ -198,7 +198,7 @@
     img {
       max-width: 100%;
     }
-	/* Sets column size for split rows */
+	/* Create half-width column */
 	.one-half {
 	  width:50%;
 	}
@@ -260,6 +260,16 @@
       .main-background-table {
         height: auto !important;
       }
+	  /* Sets half width column to full width (minus paddings) on screens smaller than 650px */
+	  .one-half {
+	    display:block!important;
+	    width:86%!important;
+		max-width:600px!important;
+	  }
+	  /*Sets half width columns back to percent-padding for mobile */
+	  .split-padding-left, .split-padding-right {
+	  padding:8%;
+	  }
       /* Utility class for hiding content on screens smaller than 650px */
       .mobile-hidden {
         display: none !important;
@@ -269,7 +279,7 @@
 </head>
 <body>
   <!-- Preheader: Most email clients show a preview of the text in your message. If the first content isn't set by you intentionally, the client pulls whatever it encounters first, typically the web copy link. -->
-  <div class="hidden-preheader">Inbox Preheader/Preview Text | To ensure the inbox preview is always clean, come up with enough content to fill 140 characters (for Apple Mail on iOS). It's basically the length of a tweet, but probably not as pithy.</div>
+  <div class="hidden-preheader">Home ownership might be closer than you think! Learn from local Real Estate experts at our free Home Buying 101 seminar & lunch.</div>
   <!-- End Preheader -->
   <!-- Begin Main Content (Table Lvl 1) -->
   <table class="main-background-table" cellpadding="0" cellspacing="0" bgcolor="#311B92" width="100%">
@@ -292,8 +302,8 @@
             <!-- End Logo -->
             <tr class="message-color">
               <td class="percent-padding" colspan="2" style="padding-bottom:0px;">
-			  <img src="https://raw.githubusercontent.com/tlunden/GVEmailAssignment/master/images/shutterstock_694004752.jpg" class="default-image" alt="Free Home Buying 101 Seminar & Lunch">
-                <h1>Home Buying 101</h1>
+			  <img src="https://raw.githubusercontent.com/tlunden/GVEmailAssignment/master/images/home-buying-101-header.jpg" class="default-image" alt="Free Home Buying 101 Seminar & Lunch">
+                <h1 style="padding-top:1rem;">Home Buying 101</h1>
 				<h3>Free Seminar & Lunch</h3>
                 <p>&nbsp;</p>
                 <p class="left">You may be closer to achieving home ownership than you think! Learn about the process of buying a new home during our free seminar and lunch at Belterra Model Center in Fresno.</p>
@@ -313,7 +323,7 @@
 				<td class="one-half split-padding-left">
 				<h4>Date & Location</h4>
 				<p>&nbsp;</p>
-				<p class="left"><strong>Saturday, August 24, 2019</strong> <br>
+				<p class="left"><strong>Saturday, Aug 24, 2019</strong> <br>
 				11:30 a.m. - 12:30 p.m. <br>
 				<br>
 				<strong>Belterra Model Center</strong> <br>
@@ -322,8 +332,8 @@
 				<p>&nbsp;</p>
                 <p class="left"><a href="https://www.gvhomes.com/home-buying-seminar/" class="default-link-dark cta">RSVP Today!</a></p>
               </td>
-			  <td class="one-half split-padding-right">
-			  <img src="#" class="default-image" alt="Home Buying 101 Seminar">
+			  <td class="one-half split-padding-right mobile-hidden">
+			  <img src="https://raw.githubusercontent.com/tlunden/GVEmailAssignment/master/images/home-buying-101-seminar.jpg" class="default-image" alt="Home Buying 101 Seminar">
 			  </td>
 			  </tr>
 			<tr class="message-color">
@@ -332,13 +342,18 @@
 			  </td>
 			</tr>
 			<tr class="message-color">
-			  <td class="one-half split-padding-left">
-			    <img src="#" class="default-image" alt="Belterra Park Opening">
+			  <td class="percent-padding" colspan="2" style="padding-bottom:0px;">
+				<h2 style="text-align:center;">New Park Opening at Belterra!</h2>
+			  </td>
+			</tr>
+			<tr class="message-color">
+			  <td class="one-half split-padding-left" style="vertical-align:top;padding-bottom:0px;"">
+			    <img src="https://raw.githubusercontent.com/tlunden/GVEmailAssignment/master/images/belterra-east-park.jpg" class="default-image" alt="Belterra East Park">
+				<p class=mobile-hidden">&nbsp;</p>
+				<img src="https://raw.githubusercontent.com/tlunden/GVEmailAssignment/master/images/family-at-belterra.jpg" class="default-image mobile-hidden" alt="Belterra Community Members">
 			  </td>
 			  <td class="one-half split-padding-right">
-			    <h2>New Park Opening at Belterra!</h2>
-			    <p>&nbsp;</p>
-			    <p class="left">Belterra in Clovis is now even better! We're excited to invite you to the grand opening of Belterra East Park. Join us for an evening of community, family, and free tacos! This event is open to the community and the public; if you've been curious about what life is like at Belterra, now is a great time to experience the neighborhood.</p>
+			    <p class="left">Belterra in Clovis is now even better! We're excited to invite you to the grand opening of Belterra East Park. <strong>Join us for an evening of community, family, and free tacos!</strong> This event is open to the public; if you've been curious about what life is like at Belterra, now is a great time to come and experience the neighborhood.</p>
 			    <ul class="left">
 			      <li>Wed, Aug 21st 2019</li>
 			      <li>5 – 7 p.m.</li>
