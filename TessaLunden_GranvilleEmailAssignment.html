@@ -1,0 +1,370 @@
+<!-- This boilerplate is currently under construction. Free for personal and commercial use, Hannah Reilly 2019 -->
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Ensures that content sizes to the initial viewport size -->
+  <meta name="viewport" content="width=device-width" initial-scale="1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Fixes rendering issues in Apple Mail on iOS 10+ -->
+  <meta name="x-apple-disable-message-reformatting" />
+  <!-- The title tag shows in certain email notifications, like Android 4.4. -->
+  <title>Letterform Boilerplate Template</title>
+  <style type="text/css">
+    /* Fixes */
+    /* Adjust text size for multiple platforms */
+    * {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+    /* Prevents automatic table borders */
+    table {
+      border-spacing: 0 !important;
+      border-collapse: collapse !important;
+    }
+    /* Prevent automatic platform specific styling */
+    table, tr, td, h1, h2, h3, h4, h5, p, a {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+    /* Removes automatic spacing in Outlook */
+    table, td {
+      mso-table-lspace: 0pt !important;
+      mso-table-rspace: 0pt !important;
+    }
+    /* Line-height adjustment for Outlook.com */
+    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+      line-height: 100%;
+    }
+    /* Outlook hidden class */
+    .outlook-hidden {
+      mso-hide: all;
+    }
+    /* Outlook.com hidden class */
+    .ExternalClass .outlook-hidden, [owa] .outlook-hidden {
+      display:none;
+    }
+    /* Continues automatic nested table styling in Yahoo */
+    table table table {
+      table-layout: auto;
+    }
+    /* Disables automatic link styling in Yahoo */
+    .yshortcuts a {
+      border-bottom: none !important;
+    }
+    /* Prevents automatic autolink styling on Apple devices */
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+    }
+  </style>
+  <style type="text/css">
+    /* Styling */
+	
+	/* Font Selection */
+	@media screen {
+	  @font-face {
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 400;
+		src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v12/zhcz-_WihjSQC0oHJ9TCYPk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+		unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+	  }
+	}
+	body {
+	font-family: Montserrat, sans-serif;
+	}
+	
+    /* Ensures the email fills the entire viewport */
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      height: 100% !important;
+      width: 100% !important;
+    }
+    /* Hidden content designed to show in message preview */
+    .hidden-preheader {
+      display: none;
+      font-size: 1px;
+      line-height: 1px;
+      max-height: 0px;
+      max-width: 0px;
+      opacity: 0;
+      overflow: hidden;
+      mso-hide: all;
+    }
+    /* Use this to adjust the background color */
+    .main-background-table {
+      background-color: #484848;
+      border: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .center-element {
+      width: 100%;
+      height: auto;
+      margin: auto;
+    }
+    /* Values that establish the width and properties of the main message column (change in assigned container) */
+    .main-content-container {
+      border: 0;
+      width: 600px;
+      height: 100%;
+      text-align: center;
+      margin: auto;
+      padding: 0;
+    }
+	tr {
+	width:100%;
+	}
+    
+    /* UTILITY SELECTORS */
+
+    /* Assign primary message background color with dark font color */
+    .message-color {
+      background-color: #ffffff;
+      color: #424242;
+    }
+    /* Assign accent background color with white font color */
+    .accent-color {
+      background-color: #252425;
+      color: #ffffff;
+    }
+    /* Assign main background color with white font color (change in main table) */
+    .bg-color {
+      background-color: #252425;
+      color: #ffffff;
+    }
+    h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 24px;
+      font-weight: 700;
+      text-align: left;
+    }
+    h2 {
+      margin: 0;
+      padding: 0;
+      font-size: 22px;
+      font-weight: 700;
+      text-align: left;
+    }
+	h3 {
+      margin: 0;
+      padding: 0;
+      font-size: 22px;
+      font-weight: normal;
+      text-align: left;
+    }
+	h4 {
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: left;
+    }
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 21px;
+    }
+	hr {
+	  display: block;
+      margin-top: 0.5em;
+	  margin-bottom: 0.5em;
+	  margin-left: auto;
+	  margin-right: auto;
+	  border-style: inset;
+	  border-width: 1px;
+	}
+    .left {
+      text-align: left
+    }
+    .right {
+      text-align: right;
+    }
+    .center {
+      text-align: center;
+    }
+    /* Set size for small italic font, useful for disclaimers, secondary links, and other utility applications */
+    .small-italic {
+      font-size: 12px;
+      font-style: italic;
+    }
+    /* Keeps all images from being stretched beyond their native resolution */
+    img {
+      max-width: 100%;
+    }
+	/* Sets column size for split rows */
+	.one-half {
+	  width:50%;
+	}
+    .percent-padding {
+      padding: 8%;
+    }
+    .fixed-padding {
+      padding: 20px;
+    }
+	.split-padding-left {
+	  padding: 8% 2% 8% 8%;
+	}
+	.split-padding-right {
+	  padding: 8% 8% 8% 2%;
+	}
+    .default-link-dark {
+      text-decoration: none;
+      color: #084675;
+      -webkit-appearance: none;
+    }
+    .default-link-light {
+      text-decoration: none;
+      color: #ffffff;
+      -webkit-appearance: none;
+    }
+	.cta {
+	  padding: .5rem 1rem;
+	  border: 3px solid #084675;
+	  background-color:#084675;
+	  color:#fff;
+	  text-transform:uppercase;
+	}
+	.cta:hover {
+	  background-color:#fff;
+	  color: #084675;
+	}
+    .default-image {
+      width: auto;
+      margin: auto;
+    }
+	.footer-logo {
+	  max-width:200px;
+	  margin:auto;
+	}
+	.full-width-rule {
+    text-align: center;
+    vertical-align: middle;
+    mso-height-rule: exactly;
+    line-height: 1px;
+    border-top: 5px solid #252425;
+    }
+    /* Make sure the max-width of this media query matches the width of .main-content-container */
+    @media screen and (max-width: 600px) {
+      /* Note: Media queries require !important designators to override inlined styles */
+      /* Limit content to width of screen */
+      .main-content-container {
+        width: 100% !important;
+      }
+      .main-background-table {
+        height: auto !important;
+      }
+      /* Utility class for hiding content on screens smaller than 650px */
+      .mobile-hidden {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Preheader: Most email clients show a preview of the text in your message. If the first content isn't set by you intentionally, the client pulls whatever it encounters first, typically the web copy link. -->
+  <div class="hidden-preheader">Inbox Preheader/Preview Text | To ensure the inbox preview is always clean, come up with enough content to fill 140 characters (for Apple Mail on iOS). It's basically the length of a tweet, but probably not as pithy.</div>
+  <!-- End Preheader -->
+  <!-- Begin Main Content (Table Lvl 1) -->
+  <table class="main-background-table" cellpadding="0" cellspacing="0" bgcolor="#311B92" width="100%">
+    <tr>
+      <td>
+        <div class="center-element">
+          <!-- Begin Centered Fixed-Width Table (Table Lvl 2) -->
+          <table class="main-content-container" align="center" cellpadding="0" cellspacing="0" width="600">
+            <!-- Web Version : BEGIN -->
+            <tr class="bg-color">
+              <td class="fixed-padding" colspan="2"><a href="#" class="default-link-light small-italic">Open in your browser &#10132;</a></td>
+            </tr>
+            <!-- Web Version : END -->
+
+            <!-- END BOILERPLATE: BEGIN CONTENT -->
+            <!-- Centered Logo -->
+            <tr class="bg-color">
+              <td class="fixed-padding" colspan="2"><img src="https://raw.githubusercontent.com/tlunden/GVEmailAssignment/master/images/granville_logo_light-01.png" class="default-image" alt="Granville Homes"/></td>
+            </tr>
+            <!-- End Logo -->
+            <tr class="message-color">
+              <td class="percent-padding" colspan="2" style="padding-bottom:0px;">
+			  <img src="https://raw.githubusercontent.com/tlunden/GVEmailAssignment/master/images/shutterstock_694004752.jpg" class="default-image" alt="Free Home Buying 101 Seminar & Lunch">
+                <h1>Home Buying 101</h1>
+				<h3>Free Seminar & Lunch</h3>
+                <p>&nbsp;</p>
+                <p class="left">You may be closer to achieving home ownership than you think! Learn about the process of buying a new home during our free seminar and lunch at Belterra Model Center in Fresno.</p>
+                <p>&nbsp;</p>
+				<p class="left">At this event, experts in a number of fields will be providing the tips and advice you need to make your dreams of owning a new home a reality. Topics you will learn include:</p>
+				<ul class="left">
+				  <li>Ways to improve your credit score</li>
+				  <li>How to buy a home after a foreclosure or short sale</li>
+				  <li>What financing and assistance programs you may be eligible for</li>
+				  <li>How today’s real estate market benefits you</li>
+				  <li>How much house you can afford</li>
+				  <li>And much more!</li>
+				</ul>
+				<p class="left">In addition, you will be able to talk to our Home Technology Experts about all of the latest advances that make today’s homes smarter than ever before.</p>
+				</tr>
+				<tr class="message-color">
+				<td class="one-half split-padding-left">
+				<h4>Date & Location</h4>
+				<p>&nbsp;</p>
+				<p class="left"><strong>Saturday, August 24, 2019</strong> <br>
+				11:30 a.m. - 12:30 p.m. <br>
+				<br>
+				<strong>Belterra Model Center</strong> <br>
+				6076 E. Brown Ave. <br>
+				Fresno, CA 93727 </p>
+				<p>&nbsp;</p>
+                <p class="left"><a href="https://www.gvhomes.com/home-buying-seminar/" class="default-link-dark cta">RSVP Today!</a></p>
+              </td>
+			  <td class="one-half split-padding-right">
+			  <img src="#" class="default-image" alt="Home Buying 101 Seminar">
+			  </td>
+			  </tr>
+			<tr class="message-color">
+			  <td class="full-width-rule" colspan="2">
+			    &nbsp;
+			  </td>
+			</tr>
+			<tr class="message-color">
+			  <td class="one-half split-padding-left">
+			    <img src="#" class="default-image" alt="Belterra Park Opening">
+			  </td>
+			  <td class="one-half split-padding-right">
+			    <h2>New Park Opening at Belterra!</h2>
+			    <p>&nbsp;</p>
+			    <p class="left">Belterra in Clovis is now even better! We're excited to invite you to the grand opening of Belterra East Park. Join us for an evening of community, family, and free tacos! This event is open to the community and the public; if you've been curious about what life is like at Belterra, now is a great time to experience the neighborhood.</p>
+			    <ul class="left">
+			      <li>Wed, Aug 21st 2019</li>
+			      <li>5 – 7 p.m.</li>
+			    </ul>
+				<p>&nbsp;</p>
+				<p class="left"><a href="https://www.google.com/maps/place/Belterra+East+Park/@36.7758192,-119.6757607,15z/data=!4m2!3m1!1s0x0:0xa8d0cc2b7569d878?sa=X&amp;ved=2ahUKEwj92PC61O7jAhUnslQKHRjsDjgQ_BIwEnoECA0QCA" class="default-link-dark cta">Get Directions</a>
+			  </td>
+			</tr>
+            <tr class="bg-color">
+              <td class="fixed-padding" colspan="2">
+                <p>&nbsp;</p>
+                <!-- Logo icon that links to main site -->
+                <a href="https://www.gvhomes.com" class="default-link-light"><img src="https://raw.githubusercontent.com/tlunden/GVEmailAssignment/master/images/granville_logo_light-01.png" class="footer-logo" alt="Granville Homes"/></a>
+                <p>&nbsp;</p>
+                <!-- Unsubscribe Link -->
+                <p class="small-italic"><a href="#" class="default-link-light"><span class="outlook-hidden">&#10006;&#xFE0E;&nbsp;</span>Unsubscribe</a> &nbsp;|&nbsp; <a href="#" class="default-link-light small-italic">Tessa Lunden 2019</a></p>
+              </td>
+            </tr>
+            <!-- END CONTENT -->
+
+          </table>
+          <!-- End Centered Fixed-Width Table -->
+        </div>
+      </td>
+    </tr>
+  </table>
+  <!-- End Main Content -->
+</body>
+</html>
